@@ -2,7 +2,7 @@
 
 :root {
   --background: #ffffff;
-  --foreground: #171717;
+  --foreground: #192f3b;
 }
 
 @theme inline {
@@ -20,7 +20,28 @@
 }
 
 body {
-  background: var(--background);
+  background-color: #020617;
   color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+  font-family: var(--font-geist-sans), system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+  min-height: 100vh;
+}
+
+.chat-scroll {
+  scrollbar-width: thin;
+  scrollbar-color: rgba(14, 165, 233, 0.45) rgba(125, 211, 252, 0.15);
+}
+
+.chat-scroll::-webkit-scrollbar {
+  width: 8px;
+}
+
+.chat-scroll::-webkit-scrollbar-track {
+  background: rgba(125, 211, 252, 0.12);
+  border-radius: 9999px;
+}
+
+.chat-scroll::-webkit-scrollbar-thumb {
+  background: linear-gradient(180deg, rgba(56, 189, 248, 0.6), rgba(14, 165, 233, 0.8));
+  border-radius: 9999px;
+  border: 2px solid rgba(255, 255, 255, 0.4);
 }
