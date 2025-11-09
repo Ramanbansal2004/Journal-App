@@ -26,11 +26,7 @@ async function addJournalEntry(entry: string) {
 }
 
  const getShoppingList = async () => {
-  const shoppingList = journalEntries.filter(entry =>
-    entry.toLowerCase().includes('buy') ||
-    entry.toLowerCase().includes('shopping') ||
-    entry.toLowerCase().includes('supermarket')
-  )
+  const shoppingList = journalEntries
 
   if (shoppingList.length === 0) {
     return 'Your shopping list is currently empty.'
